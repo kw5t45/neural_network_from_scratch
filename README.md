@@ -10,12 +10,13 @@ and our goal is to get the script to recognize the correct image.
 Used database: https://www.kaggle.com/datasets/oddrationale/mnist-in-csv
 
 * ##  Finding 0.01 as the optimal hyperparameter - 6 epochs:
+![](https://github.com/kw5t45/First-Neural-Network/blob/main/images/l_r.png?raw=true)
 
-![](images\l_r.png)
+
 <br>
 <br>
 <br>
 <br>
 
 * ## **Training process using 0.01 learning rate**
-![](images\acc.png)
+![](https://github.com/kw5t45/First-Neural-Network/blob/main/images/acc.png?raw=true)
