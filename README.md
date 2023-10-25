@@ -12,11 +12,9 @@ Used database: https://www.kaggle.com/datasets/oddrationale/mnist-in-csv
 * ##  Finding 0.01 as the optimal hyperparameter - 6 epochs:
 ![](https://github.com/kw5t45/First-Neural-Network/blob/main/images/l_r.png?raw=true)
 
-
-<br>
-<br>
-<br>
-<br>
-
 * ## **Training process using 0.01 learning rate**
 ![](https://github.com/kw5t45/First-Neural-Network/blob/main/images/acc.png?raw=true)
+
+* ## **Network presentation & visualization**
+![](https://github.com/kw5t45/First-Neural-Network/blob/main/images/nn1.png?raw=true)
+![](https://github.com/kw5t45/First-Neural-Network/blob/main/images/nn2.png?raw=true)
