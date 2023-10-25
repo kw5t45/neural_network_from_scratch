@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 
-def get_images_and_labels():
+def get_images_and_labels(test=False):
     """
 
     csv is in
@@ -10,7 +10,10 @@ def get_images_and_labels():
     we make labels a 1 x 60000 matrix and the rest a 784 x 60000 matrix.
     :return: values matrix sized 60000 x 784, labels np array sized 60000x1
     """
-    raw_df = pd.read_csv('D:\pycharmBackUp\First-Neural-Network\dataset\mnist_train.csv')  # NOQA
+    if test:
+        raw_df = pd.read_csv('D:\pycharmBackUp\First-Neural-Network\dataset\mnist_test.csv')  # NOQA
+    else:
+        raw_df = pd.read_csv('D:\pycharmBackUp\First-Neural-Network\dataset\mnist_train.csv')  # NOQA
     labels_ = raw_df.iloc[:, 0].values  # 60000 x 1 np array
     labels_ = np.eye(10)[labels_]
 
@@ -78,13 +81,13 @@ def train_network(values, labels, weights_hidden, biases_hidden, weights_output,
             biases_hidden += -learning_rate * delta_h
             correct += int(np.argmax(output_neurons) == np.argmax(label))  # accuracy for each epoch
 
-        # print(correct * 100 /60000)
+        print(correct * 100 /60000)
         correct = 0
     return weights_hidden, biases_hidden, weights_output, biases_output
 
 
 def main():
-    values, labels = get_images_and_labels()
+    values, labels = get_images_and_labels(test=True)
     params: tuple = initialize_params()
 
     w_h, b_h, w_o, b_o = train_network(*params)  # unpacking parameters
