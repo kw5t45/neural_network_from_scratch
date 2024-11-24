@@ -1,4 +1,4 @@
-# First-Neural-Network
+# Neural network from scratch.
 
 Creating my first neural network from scratch using only numpy.<br>
 This is the classic neural network which recognizes hand written digits<br> from 0 to 9,
